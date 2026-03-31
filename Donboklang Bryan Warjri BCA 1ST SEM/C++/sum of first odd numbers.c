@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+ int a,i;
+ printf("\nEnter your number: ");
+ scanf("%d",&a);
+ printf("\nThe number entered is = %d",a);
+for (i=1; i<=a; i=i+2)
+printf("\n%d",i);
+return 0;
+}
