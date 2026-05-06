@@ -112,7 +112,7 @@ ON UPDATE CASCADE;
 
 
 
-// Insert sample data into DEPARTMENT
+-- Insert sample data into DEPARTMENT
 
 
 INSERT INTO EMPLOYEE 
