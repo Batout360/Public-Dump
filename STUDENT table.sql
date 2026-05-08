@@ -92,3 +92,68 @@ INSERT INTO PREREQUISITE VALUES
 ('CS3380', 'CS3320'),
 ('CS3380', 'MATH2410'),
 ('CS3320', 'CS1310');
+
+--Querues 
+SELECT * FROM STUDENT;
+
+
+SELECT DISTINCT S.Name
+FROM STUDENT S
+JOIN GRADE_REPORT G
+ON S.StudentNumber = G.StudentNumber
+JOIN SECTION SE
+ON G.SectionIdentifier = SE.SectionIdentifier
+WHERE SE.Instructor = 'King'
+AND SE.Year IN (98, 99);
+
+
+SELECT 
+    SE.CourseNumber,
+    SE.Semester,
+    SE.SectionIdentifier,
+    COUNT(G.StudentNumber) AS NumberOfStudents
+FROM SECTION SE
+LEFT JOIN GRADE_REPORT G
+ON SE.SectionIdentifier = G.SectionIdentifier
+WHERE SE.Instructor = 'King'
+GROUP BY 
+    SE.CourseNumber,
+    SE.Semester,
+    SE.SectionIdentifier;
+
+
+SELECT 
+    S.Name,
+    S.Major,
+    C.CourseName,
+    C.CourseNumber,
+    C.CreditHours,
+    SE.Semester,
+    SE.Year,
+    G.Grade
+FROM STUDENT S
+JOIN GRADE_REPORT G
+ON S.StudentNumber = G.StudentNumber
+JOIN SECTION SE
+ON G.SectionIdentifier = SE.SectionIdentifier
+JOIN COURSE C
+ON SE.CourseNumber = C.CourseNumber
+WHERE S.Major = 'CS';
+
+
+SELECT DISTINCT S.Name, S.Major
+FROM STUDENT S
+JOIN GRADE_REPORT G
+ON S.StudentNumber = G.StudentNumber
+GROUP BY S.StudentNumber, S.Name, S.Major
+HAVING MAX(G.Grade) = 'D'
+   AND MIN(G.Grade) = 'D';
+
+
+SELECT DISTINCT S.Name, S.Major
+FROM STUDENT S
+WHERE S.StudentNumber NOT IN (
+    SELECT G.StudentNumber
+    FROM GRADE_REPORT G
+    WHERE G.Grade = 'A'
+);
