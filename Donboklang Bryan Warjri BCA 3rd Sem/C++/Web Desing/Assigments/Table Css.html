@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and CSS Animations</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: green;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: limegreen;
+        }
+
+        tr:nth-child(even):hover {
+            background-color: yellow;
+        }
+
+ 
+        @media screen and (max-width: 600px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th, td {
+                text-align: left;
+            }
+        }
+
+       
+        h1 {
+            border: 2px solid black;
+            background-color: lightcoral;
+            text-align: center;
+            padding: 10px;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+
+        p {
+            font-size: 18px;
+            margin: 20px;
+            animation: fadeIn 3s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bobby</td>
+                <td>Sharma</td>
+                <td>Female</td>
+            </tr>
+            <tr>
+                <td>Mansai</td>
+                <td>Hazanika</td>
+                <td>Female</td>
+            </tr>
+            <tr>
+                <td>Pranab</td>
+                <td>Das</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Rupam</td>
+                <td>Sharma</td>
+                <td>Female</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>CSS Animations</h1>
+    <p>This paragraph demonstrates CSS animations using @keyframes.</p>
+</body>
+</html>

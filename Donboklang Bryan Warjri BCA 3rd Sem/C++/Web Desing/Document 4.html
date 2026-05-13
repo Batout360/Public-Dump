@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+</head>
+<body>
+    <center>
+        <h1 align="center" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; size: 13pt;">Feedback form</h1>
+    <form action="" method="post">
+        <fieldset class="yellow">
+        <legend class="orange">Contact info</legend>
+        <table border="1" padding="6" cellpadding="10" cellspacing="5" style="width: 720px;" class="salmon">
+            
+            <tr>
+                <td><label for="name">Enter your name:</label></td>
+        
+                <td><input type="text" placeholder="Name" name="name" style="width: 400px;"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="email">Enter your Email:</label></td>
+
+                <td><input type="email" placeholder="Google@gmail.com" name="email" style="width: 400px;"></td>
+            </tr>
+          
+            <tr>
+                <td><label for="name">Enter your password:</label></td>
+        
+                <td><input type="password" placeholder="password" name="password"></td>
+            </tr>
+
+             <tr>
+                <td><label for="Birthday">Birthday</label></td>
+        
+                <td><input type="date" placeholder="dd-mm-yyyy" name="Birthday"></td>
+            </tr>
+            </table>
+        </fieldset>
+        <br><br><br>
+
+
+        <fieldset class="orange">
+        <legend class="yellow">Feedback Details</legend>
+        <table border="1" padding="6" cellpadding="10" cellspacing="5" class="yellow">
+            
+            <tr>
+                <td><label for="Feedback Type">Feedback type:</label></td>
+        
+                <td>
+                <select name="Feedback Type" id="Fbt">
+                    <option value="General Feedback">General Feedback</option>
+                    <option value="Casual Feedback">Casual Feedback</option>
+                </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="Rating">Rating:</label></td>
+                <td>
+                <input type="radio" name="Rating" value="Execellent"><label for="Execellent">Execellent</label>
+                <input type="radio" name="Rating" value="Good"><label for="Good">Good</label>
+                <input type="radio" name="Rating" value="Average"><label for="Average">Average</label>
+                <input type="radio" name="Rating" value="Below Average"><label for="Below Average">Below Average</label>
+                </td>
+            </tr>
+          
+            <tr>
+                <td><label for="commments">Coments:</label></td>
+        
+                <td><Textarea name="comments" rows="5" cols="50"></Textarea></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><label for="newsletters"></label>Subcribe to newsletters
+
+                    <input type="checkbox" name="newsletters" value="yes"></td>
+
+            </tr>
+        </table>
+        </fieldset>
+
+        <br><br><br>
+        <fieldset class="yellow">
+        <legend class="orange">Feedback Details</legend>
+        <table border="1" padding="6" cellpadding="10" cellspacing="5"  style="width: 720px;" class="salmon">
+            <tr><td >Prefred Browser:<input type="text" id="Browser" name="Browser"></td></tr>
+
+            <tr><td align="center"><button type="submit" >Submit Feedback</button></td></tr>
+        </table>
+        </fieldset>
+
+ 
+    </form>
+
+    </center>
+
+</body>
+</html>
+
+
+
+
+
+<style>
+    .pink{
+        background-color: burlywood;
+        color: #000;
+    }
+
+    .yellow{
+        background-color: lemonchiffon;
+        color: #000;
+    }
+
+    .salmon{
+        background-color: burlywood;
+        color: #000;
+    }
+
+    .orange{
+        background-color: orange;
+        color: #000;
+    }
+
+
+</style>
